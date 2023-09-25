@@ -1,0 +1,142 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1.6rem;
+}
+
+textarea,
+button,
+select,
+input {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* Common */
+a {
+    text-decoration: none;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+h2 {
+    color: #080415;
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 117.857%;
+    letter-spacing: -0.224rem;
+}
+
+h3 {
+    color: #080415;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.128rem;
+}
+
+.desc {
+    color: #51586a;
+    line-height: 143.75%;
+}
+
+.btn {
+    --btn-width: 170px;
+    --btn-height: 62px;
+
+    min-width: var(--btn-width);
+    height: var(--btn-height);
+    background: #5d3bee;
+    color: #fdfdfd;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.66667;
+}
+
+/* Header */
+
+.header {
+    padding-top: 20px;
+}
+
+.header-sticky {
+    position: sticky;
+    top: -20px;
+    z-index: 999;
+}
+
+.header__inner {
+    width: 83.125%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logo-wrap {
+    width: 46px;
+    height: 46px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: solid 1px #5d3bee33;
+}
+
+.header-contact {
+    color: #080415;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 1.36364;
+    text-decoration-line: underline;
+    text-underline-offset: 2px;
+}
+
+.header .logo {
+    position: absolute;
+    left: 50%;
+    translate: -50% 0;
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav__menu-list {
+    margin-right: -21px;
+    display: flex;
+}
+
+.nav__menu-item {
+    display: inline-block;
+    padding: 12px 20px;
+    color: #51586a;
+    font-size: 1.8rem;
+}
+
+.nav__menu-item:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
