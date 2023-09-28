@@ -50,7 +50,8 @@ h3 {
 
 .desc {
     color: #51586a;
-    line-height: 143.75%;
+    line-height: 1.6667;
+    font-size: 1.8rem;
 }
 
 .btn {
@@ -196,6 +197,10 @@ h3 {
 
 .hero__cta-link {
     padding: 10px;
+}
+
+.hero__cta-link,
+.cta-link {
     color: #080415;
     font-size: 1.8rem;
     font-weight: 700;
@@ -261,7 +266,7 @@ h3 {
 
 /* Service */
 .service {
-    margin-top: 133px;
+    margin: 133px 0 140px;
 }
 
 .service__intro {
@@ -296,4 +301,54 @@ h3 {
 
 .service__item-desc {
     margin-top: 15px;
+}
+
+/* Project */
+.project {
+    padding: 86px;
+    background: #5d3bee;
+}
+
+.project__heading {
+    width: min(468px, 82%);
+    color: #fff;
+}
+
+.project__desc {
+    width: min(400px, 70.17%);
+    padding: 34px 0 34px 34px;
+    color: #fff;
+}
+
+.project__list {
+    margin-top: 70px;
+}
+
+.project__item {
+    padding: 24px 24px 24px 34px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fbfaff;
+}
+
+.project__item-content {
+    width: min(43.56%, 223px);
+}
+
+.project__item-desc {
+    margin: 10px 0 20px;
+    line-height: 1.4375;
+    font-size: 1.6rem;
+}
+
+.project__item-thumb {
+    width: min(48.05%, 246px);
+    height: auto;
+}
+
+.project__btn {
+    margin-top: 80px;
+    background: #fff;
+    color: #080415;
 }

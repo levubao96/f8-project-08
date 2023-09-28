@@ -16,6 +16,8 @@
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--spacing-col) / 2);
     margin-right: calc(-1 * var(--spacing-col) / 2);
+    margin-top: calc(-1 * var(--spacing-col) / 2);
+    margin-bottom: calc(-1 * var(--spacing-col) / 2);
 }
 
 .col {
@@ -27,6 +29,8 @@
 [class*="row-cols-"] > .col {
     padding-left: calc(var(--spacing-col) / 2);
     padding-right: calc(var(--spacing-col) / 2);
+    padding-top: calc(var(--spacing-col) / 2);
+    padding-bottom: calc(var(--spacing-col) / 2);
 }
 
 .row > [class*="col-"],
@@ -167,6 +171,12 @@
 
 .g-0 {
     padding: 0;
+}
+
+.align-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Small devices (landscape phones, 576px and up) */
