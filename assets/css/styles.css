@@ -333,7 +333,7 @@ h3 {
 }
 
 .project__item-content {
-    width: min(43.56%, 223px);
+    width: min(44.5%, 223px);
 }
 
 .project__item-desc {
@@ -351,4 +351,92 @@ h3 {
     margin-top: 80px;
     background: #fff;
     color: #080415;
+}
+
+/* About */
+.about {
+    margin-top: 140px;
+}
+
+.about__intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about__tags {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.about__tags :first-child {
+    color: #5d3bee;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.128rem;
+}
+
+.about__heading {
+    margin: 10px 0 15px;
+}
+
+.about__desc {
+    width: min(570px, 50%);
+    text-align: center;
+}
+
+.about__achievements-wrap {
+    width: 100%;
+    margin: 70px 0;
+}
+
+.about__achievements {
+    width: min(83%, 946px);
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1px solid;
+    border-color: #08041533 transparent #08041533 transparent;
+}
+
+.about__achievement-number {
+    color: #080415;
+    font-size: 5.6rem;
+    font-weight: 500;
+    line-height: 1.35714;
+    letter-spacing: 0.168rem;
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+}
+
+.about__achievement-factor {
+    color: #51586a;
+    font-size: 1.8rem;
+    line-height: 1.66667;
+}
+
+.about__video {
+    width: 100%;
+    height: min(628px, 56.25vw);
+    background: url(../img/about-video.png) center/contain no-repeat;
+}
+
+.video-player {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 111px;
+    height: 111px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    transition: scale 400ms;
+}
+
+.video-player:hover {
+    scale: 1.1;
 }
