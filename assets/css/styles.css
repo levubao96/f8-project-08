@@ -645,3 +645,30 @@ h3 {
     height: 100%;
     object-fit: cover;
 }
+
+/* Contact */
+.contact {
+    margin-top: 140px;
+}
+
+.contact__content {
+    padding: 68px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fbfaff;
+}
+
+.contact__icon {
+    width: 90px;
+}
+
+.contact__heading {
+    margin: 15px 0 20px;
+}
+
+.contact__desc {
+    margin-bottom: 40px;
+    width: 570px;
+    text-align: center;
+}
