@@ -588,6 +588,7 @@ h3 {
     flex-shrink: 0;
     border-radius: 50%;
     border: 2px solid #161a1c33;
+    cursor: pointer;
 }
 
 .faq__item-btn :last-child {
@@ -612,4 +613,35 @@ h3 {
 
 .faq [type="radio"]:checked + .faq__body .faq__item-btn :last-child {
     display: block;
+}
+
+/* Gallery */
+.gallery {
+    margin-top: 160px;
+}
+
+.gallery__content {
+    margin-bottom: 70px;
+    flex-direction: column;
+}
+
+.gallery__desc {
+    margin: 20px 0 30px;
+    width: 528px;
+}
+
+.gallery__link {
+    color: #5d3bee;
+    font-size: 3.2rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.128rem;
+    text-decoration-line: underline;
+    text-underline-offset: 7px;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
