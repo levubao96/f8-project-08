@@ -97,11 +97,11 @@
         <!-- Grid CSS -->
         <link rel="stylesheet" href="./assets/css/grid.css" />
 
-        <!-- Responsive CSS -->
-        <link rel="stylesheet" href="./assets/css/responsive.css" />
-
         <!-- Styles CSS -->
         <link rel="stylesheet" href="./assets/css/styles.css" />
+
+        <!-- Responsive CSS -->
+        <link rel="stylesheet" href="./assets/css/responsive.css" />
     </head>
     <body>
         <!-- Header -->
@@ -119,22 +119,17 @@
                                 class="header-contact__logo"
                             />
                         </figure>
-                        hi@arif.interactive
+                        <p>hi@arif.interactive</p>
                     </a>
+
                     <!-- Logo -->
                     <a href="/" class="logo">
-                        <img
-                            srcset="
-                                ./assets/img/logo-100x100.png,
-                                ./assets/img/logo-200x200.png 2x
-                            "
-                            src="./assets/img/logo-200x200.png"
-                            alt="arif"
-                        />
+                        <img src="./assets/img/logo.png" alt="arif" />
                     </a>
+
                     <!-- Navigation menu -->
                     <nav class="nav">
-                        <ul class="nav__menu-list">
+                        <ul class="nav__menu-list" id="nav">
                             <li>
                                 <a href="#project" class="nav__menu-item"
                                     >Projects</a
@@ -157,7 +152,66 @@
                             </li>
                         </ul>
                     </nav>
+
+                    <!-- Menu hamburger - Mobile -->
+                    <label
+                        for="mobile-header"
+                        class="nav-mobile-menu show-on-mobile logo-wrap"
+                    >
+                        <img
+                            src="./assets/icon/menu-hamburger.svg"
+                            alt=""
+                            class="menu-hamburger"
+                        />
+                    </label>
                 </div>
+            </div>
+        </header>
+
+        <!-- Header - Mobile -->
+        <header class="mobile-header show-on-mobile">
+            <input
+                class="mobile__menu-checkbox"
+                type="checkbox"
+                name="mobile-header"
+                id="mobile-header"
+            />
+            <label for="mobile-header" class="mobile__menu-overlay"></label>
+            <div class="mobile__menu-drawer">
+                <!-- Logo -->
+                <a href="/" class="logo mobile__logo">
+                    <img src="./assets/img/logo.png" alt="arif" />
+                </a>
+
+                <!-- Navbar -->
+                <nav class="nav mobile__nav">
+                    <ul
+                        class="nav__menu-list mobile-nav__menu-list"
+                        id="mobile-nav"
+                    ></ul>
+                </nav>
+
+                <!-- Script -->
+                <script>
+                    const navMenu = document.querySelector("#nav");
+                    const navMenuMobile = document.querySelector("#mobile-nav");
+
+                    navMenuMobile.innerHTML = navMenu.innerHTML;
+                </script>
+
+                <!-- Email -->
+                <a
+                    href="mailto:hi@arif.interactive"
+                    class="header-contact mobile__header-contact"
+                    ><figure class="logo-wrap">
+                        <img
+                            src="./assets/icon/mail.svg"
+                            alt=""
+                            class="header-contact__logo"
+                        />
+                    </figure>
+                    <p>hi@arif.interactive</p>
+                </a>
             </div>
         </header>
 
@@ -165,7 +219,7 @@
         <section class="hero">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <figure class="hero__img-wrap">
                             <img
                                 src="./assets/img/hero-img.png"
@@ -173,13 +227,13 @@
                                 class="hero__img"
                             />
                             <img
-                                src="./assets/icon/hero-img-bg.svg"
+                                src="./assets/img/hero-bg.png"
                                 alt=""
                                 class="hero__img-bg"
                             />
                         </figure>
                     </div>
-                    <div class="col-6">
+                    <div class="col-md-6 col-12">
                         <section class="hero__content">
                             <h1 class="hero__title">An Interactive Designer</h1>
                             <p class="hero__desc desc">
@@ -226,12 +280,12 @@
             <section class="client">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-4">
+                        <div class="col-lg-4 col-12">
                             <h2 class="client__title">
                                 Meet my recent clients
                             </h2>
                         </div>
-                        <div class="col col-8 client__list">
+                        <div class="col-lg-8 col-12 client__list">
                             <img
                                 src="./assets/icon/Google.svg"
                                 alt=""
@@ -281,7 +335,7 @@
             <section class="service">
                 <div class="container">
                     <div class="row">
-                        <div class="col col-12">
+                        <div class="col-12">
                             <section class="service__intro">
                                 <h2>Specialities</h2>
                                 <p class="service__desc desc">
@@ -292,8 +346,8 @@
                             </section>
                         </div>
                     </div>
-                    <div class="row row-cols-3 service__list">
-                        <div class="col">
+                    <div class="row service__list">
+                        <div class="col-lg-4 col-12">
                             <article class="service__item">
                                 <figure class="service__item-icon-wrap">
                                     <img
@@ -311,7 +365,7 @@
                                 </p>
                             </article>
                         </div>
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <article class="service__item">
                                 <figure class="service__item-icon-wrap">
                                     <img
@@ -327,7 +381,7 @@
                                 </p>
                             </article>
                         </div>
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <article class="service__item">
                                 <figure class="service__item-icon-wrap">
                                     <img
@@ -346,19 +400,30 @@
                             </article>
                         </div>
                     </div>
+                    <div class="row show-on-mobile">
+                        <div class="col-12">
+                            <div class="service__nav-dots">
+                                <div class="service__nav-dot"></div>
+                                <div
+                                    class="service__nav-dot service__nav-dot--active"
+                                ></div>
+                                <div class="service__nav-dot"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <!-- Project -->
             <section class="project">
                 <div class="container">
-                    <div class="row row-cols-2">
-                        <div class="col">
+                    <div class="row mobile-project-row">
+                        <div class="col-lg-6 col-12">
                             <h2 class="project__heading">
                                 Take a look at my recent projects
                             </h2>
                         </div>
-                        <div class="col">
+                        <div class="col-lg-6 col-12">
                             <p class="desc project__desc">
                                 Lorem ipsum dolor sit amet, consectetur
                                 adipiscing elit. In urna, non nisl tincidunt ut
@@ -366,7 +431,9 @@
                             </p>
                         </div>
                     </div>
-                    <div class="project__list row row-cols-2">
+                    <div
+                        class="project__list row-cols-lg-2 row-cols-md-1 row-cols-xs-1 row-cols-1"
+                    >
                         <div class="col">
                             <article class="project__item">
                                 <section class="project__item-content">
@@ -541,7 +608,7 @@
             <section class="testimonial">
                 <div class="container">
                     <div class="row">
-                        <div class="col">
+                        <div class="col-12">
                             <section class="testimonial__header">
                                 <h2 class="testimonial__heading">
                                     What people says
@@ -555,7 +622,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col col-12">
+                        <div class="col-12">
                             <div class="testimonial__list">
                                 <!-- Item 1 -->
                                 <article class="testimonial__item">
@@ -651,14 +718,14 @@
             <section class="faq">
                 <div class="container">
                     <div class="row">
-                        <div class="col offset-1 col-10">
+                        <div class="offset-lg-1 col-lg-10 col-12">
                             <h2 class="faq__heading">
                                 A few questions clients normally ask me
                             </h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col offset-1 col-10">
+                        <div class="offset-lg-1 col-lg-10 col-12">
                             <section class="faq__list">
                                 <!-- Item 1 -->
                                 <div class="faq__row">
@@ -855,27 +922,40 @@
                             </section>
                         </div>
                     </div>
-                    <div class="row row-cols-3">
-                        <div class="col">
+                    <div class="row gallery-collection">
+                        <div class="col-lg-4 col-12">
                             <img
                                 src="./assets/img/gallery-img-1.png"
                                 alt=""
                                 class="gallery__img"
                             />
                         </div>
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <img
                                 src="./assets/img/gallery-img-2.png"
                                 alt=""
                                 class="gallery__img"
                             />
                         </div>
-                        <div class="col">
+                        <div class="col-lg-4 col-12">
                             <img
                                 src="./assets/img/gallery-img-3.png"
                                 alt=""
                                 class="gallery__img"
                             />
+                        </div>
+                    </div>
+                    <div class="row show-on-mobile">
+                        <div class="col-12">
+                            <div class="gallery__nav-dots">
+                                <div class="gallery__nav-dot"></div>
+                                <div class="gallery__nav-dot"></div>
+                                <div
+                                    class="gallery__nav-dot gallery__nav-dot--active"
+                                ></div>
+                                <div class="gallery__nav-dot"></div>
+                                <div class="gallery__nav-dot"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -911,15 +991,62 @@
         </main>
 
         <!-- Footer -->
-        <!-- <footer class="footer">
+        <footer class="footer">
             <div class="container-fluid">
-                <div class="inner">Footer</div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col">Copyright</div>
+                <div class="header__inner footer__top">
+                    <!-- Email -->
+                    <a
+                        href="mailto:hi@arif.interactive"
+                        class="header-contact footer-contact"
+                        ><figure class="logo-wrap">
+                            <img
+                                src="./assets/icon/mail.svg"
+                                alt=""
+                                class="header-contact__logo"
+                            />
+                        </figure>
+                        hi@arif.interactive
+                    </a>
+                    <!-- Logo -->
+                    <a href="/" class="logo footer-logo">
+                        <img src="./assets/img/logo.png" alt="arif" />
+                    </a>
+                    <!-- Navigation menu -->
+                    <nav class="nav mobile-nav">
+                        <ul class="nav__menu-list">
+                            <li>
+                                <a href="#project" class="nav__menu-item"
+                                    >Projects</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#about" class="nav__menu-item"
+                                    >Journey</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#service" class="nav__menu-item"
+                                    >Service</a
+                                >
+                            </li>
+                            <li>
+                                <a href="#contact" class="nav__menu-item"
+                                    >Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__copyright">
+                        ©interactiveArif 2021. All rights reserved.
+                    </p>
+                    <div class="footer__policy">
+                        <a href="">Privacy Policy</a>
+                        <a href="">Terms of Conditions</a>
+                    </div>
                 </div>
             </div>
-        </footer> -->
+        </footer>
     </body>
 </html>

@@ -11,7 +11,8 @@
     margin-left: auto;
 }
 
-.row {
+.row,
+[class*="row-cols-"] {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(-1 * var(--spacing-col) / 2);
@@ -177,6 +178,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Smaller devices (landscape phones, less than 575.98px) */
+@media (max-width: 575.98px) {
+    .container {
+        width: calc(100% - 40px);
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
